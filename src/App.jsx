@@ -11,7 +11,7 @@ const fetchData = fetch("/data.json").then((res) => res.json());
 function App() {
   const [toggle, setToggle] = useState("product");
   const [cart, setCart] = useState([])
-  console.log(cart)
+
 
 
   const toggleButton = (it) => {
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar cart={cart}></Navbar>
 
       <div className="flex justify-center mt-5">
         <button
@@ -33,7 +33,7 @@ function App() {
           onClick={() => toggleButton("cart")}
           className={` ${toggle === "cart" && "bg-green-500 text-white"} w-20  py-2 px-4 rounded-full`}
         >
-          Cart
+          Cart ({cart.length})
         </button>
       </div>
 
@@ -41,7 +41,7 @@ function App() {
         <Suspense fallback={<Loading> </Loading>}>
           <Cards fetchData={fetchData} cart={cart} setCart={setCart}></Cards>
         </Suspense>
-      : <Carts cart={cart}></Carts>}
+      : <Carts cart={cart} setCart={setCart}></Carts>}
 
       <Hero></Hero>
       <Rating></Rating>

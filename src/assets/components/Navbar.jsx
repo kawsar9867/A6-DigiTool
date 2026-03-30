@@ -1,6 +1,6 @@
 import { ShoppingCart } from "lucide-react";
 
-function Navbar() {
+function Navbar({ cart }) {
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm">
@@ -48,8 +48,13 @@ function Navbar() {
 
         <div className="navbar-end gap-5">
           <div>
-            <button className="btn relative">
-              <ShoppingCart /> <div className="badge badge-sm bg-red-500 text-white absolute -top-3 -right-4 ">+99</div>
+            <button className=" relative">
+              <ShoppingCart />{" "}
+              {cart.length > 0 && (
+                <div className="badge badge-sm bg-red-500 text-white absolute -top-3 -right-4 ">
+                  {cart.length}
+                </div>
+              )}
             </button>
           </div>
           <div>
