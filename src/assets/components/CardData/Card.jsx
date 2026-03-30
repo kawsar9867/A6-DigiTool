@@ -1,6 +1,11 @@
 import { Check } from "lucide-react";
+import { toast } from "react-toastify";
 
-function Card({ card }) {
+function Card({ card, cart, setCart }) {
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+    toast.success("Item added")
+  };
   const addTagBg = (type) => {
     switch (type) {
       case "best-seller":
@@ -43,7 +48,10 @@ function Card({ card }) {
           </ul>
         </div>
         <div>
-          <button className="btn rounded-full w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white">
+          <button
+            onClick={() => addToCart(card)}
+            className="btn rounded-full w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"
+          >
             Buy Now{" "}
           </button>
         </div>

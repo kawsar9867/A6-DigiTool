@@ -1,9 +1,9 @@
-
-
 function Loading() {
   return (
-    <div><span className="loading loading-dots loading-xl"></span></div>
-  )
+    <div className="container flex justify-center min-h-screen  ">
+      <span className="loading loading-dots loading-xl"></span>
+    </div>
+  );
 }
 
-export default Loading
+export default Loading;
