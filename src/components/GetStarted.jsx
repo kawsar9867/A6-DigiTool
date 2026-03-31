@@ -12,7 +12,7 @@ function GetStarted() {
         Start using premium digital tools in minutes, not hours.
       </p>
       <div className="mt-10 flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-center gap-10 ">
-        <div className="relative text-center flex flex-col items-center border-3 border-gray-300 rounded-lg p-5 space-y-3 shadow-lg h-[250px] transition duration-100 hover:scale-101">
+        <div className="relative text-center flex flex-col items-center border-3 border-gray-100 rounded-lg p-5 space-y-3 shadow-lg h-[250px] transition duration-100 hover:scale-101">
           <span className="absolute top-3 right-3 text-white rounded-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] px-2 py-1">
             01
           </span>
@@ -24,7 +24,7 @@ function GetStarted() {
             Sign up for free in seconds. No credit card required to get started.
           </p>
         </div>
-        <div className="relative text-center flex flex-col items-center border-3 border-gray-300 rounded-lg p-5 space-y-3 shadow-lg h-[250px] transition duration-100 hover:scale-101">
+        <div className="relative text-center flex flex-col items-center border-3 border-gray-100 rounded-lg p-5 space-y-3 shadow-lg h-[250px] transition duration-100 hover:scale-101">
           <span className="absolute top-3 right-3 text-white rounded-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] px-2 py-1">
             02
           </span>
@@ -36,7 +36,7 @@ function GetStarted() {
             Browse our catalog and select the tools that fit your needs.
           </p>
         </div>
-        <div className="relative text-center flex flex-col items-center border-3 border-gray-300 rounded-lg p-5 space-y-3 shadow-lg h-[250px] transition hover:scale-101">
+        <div className="relative text-center flex flex-col items-center border-3 border-gray-100 rounded-lg p-5 space-y-3 shadow-lg h-[250px] transition hover:scale-101">
           <span className="absolute top-3 right-3 text-white rounded-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] px-2 py-1">
             03
           </span>

@@ -1,4 +1,5 @@
 import { toast } from "react-toastify";
+import EmptyCart from "./EmptyCart";
 
 function Carts({ cart, setCart }) {
   const total = cart.reduce((sum, item) => sum + item.price, 0);
@@ -15,6 +16,13 @@ function Carts({ cart, setCart }) {
   return (
     <div className="px-5">
       <div className=" border-2 border-gray-200 rounded-lg space-y-3 p-5 mb-10 mt-5 ">
+        <div>
+              <h2 className="font-bold text-[24px] mb-3 text-gray-500">Your Cart</h2>
+            </div>
+{cart.length === 0 ? (
+  <EmptyCart></EmptyCart>
+) : (
+            <>
         {cart.map((item) => (
           <div className="bg-[#F9FAFC] p-5 flex justify-between rounded-xl">
             <div className="flex gap-3">
@@ -34,6 +42,7 @@ function Carts({ cart, setCart }) {
             </div>
           </div>
         ))}
+       
         <div className="flex justify-between">
           <p className="text-[17px] font-semibold text-[#62738299]">Total</p>
           <p className="text-[17px] font-semibold "> ${total} </p>
@@ -42,8 +51,9 @@ function Carts({ cart, setCart }) {
           {" "}
           Proced to Checkout
         </button>
+        </>
+        )}
       </div>
-      <div></div>
     </div>
   );
 }

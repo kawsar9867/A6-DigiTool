@@ -30,7 +30,7 @@ function App() {
     <p className="text-center text-gray-400">Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
   </div>
       <div className="flex justify-center mt-2 mb-5">
-        <span className="border-1 border-gray-300 rounded-full">
+        <span className="border-1 border-gray-300 rounded-full shadow-sm">
         <button
           onClick={() => toggleButton("product")}
           className={`w-20 ${toggle === "product" && "bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white"} py-2 px-4 rounded-full`}

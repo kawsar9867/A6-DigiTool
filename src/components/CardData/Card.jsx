@@ -20,7 +20,7 @@ function Card({ card, cart, setCart }) {
   };
   return (
     <section className="">
-    <div className="bg-white shadow-md border-3 border-gray-200 rounded-xl p-5 transition hover:scale-101">
+    <div className="bg-white border-3 border-gray-100 rounded-xl p-5 transform transition duration-300 hover:-translate-y-2 hover:shadow-lg h-[370px]">
       <div className="space-y-3">
         <div className="flex items-center justify-between bg-white ">
           <img className="w-10 h-10 border-1 border-gray-300 rounded-full" src={card.icon} alt="" />
