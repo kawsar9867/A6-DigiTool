@@ -10,6 +10,7 @@ function Carts({ cart, setCart }) {
   const removeItem = (itm) => {
     const newArray = cart.filter((c) => c.id !== itm.id);
     setCart(newArray);
+    toast.success("Item Removed");
   };
   return (
     <div className="px-5">

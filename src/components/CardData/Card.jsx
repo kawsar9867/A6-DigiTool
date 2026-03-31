@@ -19,10 +19,11 @@ function Card({ card, cart, setCart }) {
     }
   };
   return (
-    <div className="bg-white shadow-md p-5 ">
+    <section className="">
+    <div className="bg-white shadow-md border-3 border-gray-200 rounded-xl p-5 ">
       <div className="space-y-3">
         <div className="flex items-center justify-between bg-white ">
-          <img className="w-10 h-10" src={card.icon} alt="" />
+          <img className="w-10 h-10 border-2 border-gray-400 rounded-full" src={card.icon} alt="" />
           <p className={`${addTagBg(card.tagType)} rounded-full px-3 py-1`}>
             {" "}
             {card.tag}{" "}
@@ -41,7 +42,7 @@ function Card({ card, cart, setCart }) {
           <ul>
             {card.features.map((f) => (
               <p className="flex gap-2">
-                <Check color="green"> </Check>
+                <Check color="green" size="20"> </Check>
                 <li> {f} </li>
               </p>
             ))}
@@ -57,6 +58,7 @@ function Card({ card, cart, setCart }) {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

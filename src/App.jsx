@@ -1,18 +1,16 @@
 import { Suspense, useState } from "react";
-import Hero from "./assets/components/Hero";
-import Navbar from "./assets/components/Navbar";
-import Rating from "./assets/components/Rating";
-import Loading from "./assets/components/Loading";
-import Cards from "./assets/components/CardData/Cards";
-import Carts from "./assets/components/Cart/Carts";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import Rating from "./components/Rating";
+import Loading from "./components/Loading";
+import Cards from "./components/CardData/Cards";
+import Carts from "./components/Cart/Carts";
 
 const fetchData = fetch("/data.json").then((res) => res.json());
 
 function App() {
   const [toggle, setToggle] = useState("product");
-  const [cart, setCart] = useState([])
-
-
+  const [cart, setCart] = useState([]);
 
   const toggleButton = (it) => {
     setToggle(it);
@@ -21,6 +19,9 @@ function App() {
   return (
     <>
       <Navbar cart={cart}></Navbar>
+
+      <Hero></Hero>
+      <Rating></Rating>
 
       <div className="flex justify-center mt-5">
         <button
@@ -42,9 +43,6 @@ function App() {
           <Cards fetchData={fetchData} cart={cart} setCart={setCart}></Cards>
         </Suspense>
       : <Carts cart={cart} setCart={setCart}></Carts>}
-
-      <Hero></Hero>
-      <Rating></Rating>
     </>
   );
 }
