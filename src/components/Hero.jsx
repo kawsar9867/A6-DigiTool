@@ -20,7 +20,7 @@ function Hero() {
             Explore Products
           </p>
           <div className="flex">
-            <button class="mr-3 bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full px-3 py-2 text-white font-semibold">
+            <button class="mr-3 bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-full px-3 py-2 text-white font-semibold hover:from-[#3b2dd4] hover:to-[#7e12d8]">
               Explore Products
             </button>
             <button className="border-1 px-3 py-2 rounded-full text-purple-400 font-semibold items-center flex gap-2"><img src={icon} alt="" />

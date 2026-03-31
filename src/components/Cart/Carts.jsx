@@ -14,12 +14,12 @@ function Carts({ cart, setCart }) {
   };
   return (
     <div className="px-5">
-      <div className=" border space-y-3 p-5">
+      <div className=" border-2 border-gray-200 rounded-lg space-y-3 p-5 mb-10 mt-5 ">
         {cart.map((item) => (
-          <div className="bg-amber-200 p-5 flex justify-between">
+          <div className="bg-[#F9FAFC] p-5 flex justify-between rounded-xl">
             <div className="flex gap-3">
               <div>
-                <img className="w-10 h-10" src={item.icon} alt="" />
+                <img className="w-10 h-10 border-1 border-gray-300 rounded-full" src={item.icon} alt="" />
               </div>
               <div>
                 <p>{item.name}</p>
@@ -27,7 +27,7 @@ function Carts({ cart, setCart }) {
               </div>
             </div>
             <div>
-              <button onClick={() => removeItem(item)} className="btn">
+              <button onClick={() => removeItem(item)} className="btn text-red-500">
                 {" "}
                 Remove{" "}
               </button>
@@ -35,10 +35,10 @@ function Carts({ cart, setCart }) {
           </div>
         ))}
         <div className="flex justify-between">
-          <p>total</p>
-          <p> $ {total} </p>
+          <p className="text-[17px] font-semibold text-[#62738299]">Total</p>
+          <p className="text-[17px] font-semibold "> ${total} </p>
         </div>
-        <button onClick={deleteAll} className="btn w-full">
+        <button onClick={deleteAll} className="btn rounded-full w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white hover:from-[#3b2dd4] hover:to-[#7e12d8]">
           {" "}
           Proced to Checkout
         </button>
