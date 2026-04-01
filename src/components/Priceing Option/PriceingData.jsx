@@ -1,3 +1,4 @@
+import { Check } from 'lucide-react';
 import React from 'react';
 
 const PriceingData = ({ pricing }) => {
@@ -25,7 +26,9 @@ const PriceingData = ({ pricing }) => {
 
       <div  className={` ${pricing.isPopular ? "text-white" : "text-black"}`}>
         {pricing.features.map((feature, index) => (
-          <p key={index}>{feature}</p>
+          <div className='flex gap-2'>
+            <Check color={`${pricing.isPopular ? "white" : "green"}`}/> <p key={index}>{feature}</p>
+          </div>
         ))}
       </div>
 
