@@ -6,7 +6,7 @@ import png3 from "../assets/products/Twitter.png";
 
 function Footer() {
   return (
-    <section className="bg-black  ">
+    <section className="bg-black ">
       <div className="p-20 flex gap-25 flex justify-center">
         <div className="">
           <img src={logo} alt="DigiTools Logo" className="mb-4" />

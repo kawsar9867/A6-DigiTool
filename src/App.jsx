@@ -59,8 +59,8 @@ function App() {
       : <Carts cart={cart} setCart={setCart}></Carts>}
       </section>
       <GetStarted></GetStarted>
-      <main>
-        <div className="mt-15 mb-10">
+      <main className="container mx-auto">
+        <div className="mt-15 mb-10 ">
           <h1 className="text-3xl font-bold text-center">Simple, Transparent Pricing</h1>
           <p className="text-[#627382] text-center">Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
         </div>
