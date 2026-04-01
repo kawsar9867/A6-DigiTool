@@ -53,7 +53,7 @@ function Footer() {
         </div>
       </div>
  
-        <div className="container mx-auto w-300">
+        <div className="container mx-auto max-w-300">
          <hr className="bg-gray-800 h-1 "/>
       <div className="text-white flex justify-between   py-5">
         <div>
