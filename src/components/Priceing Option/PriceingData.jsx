@@ -18,21 +18,21 @@ if (titleLower === "pro") {
   return (
     <section className={`${bgColorClass} t-5 mb-10 rounded-lg p-5 space-y-5`}>
       <div>
-        <h1 className='text-2xl '>{pricing.title}</h1>
-        <h4 className=''>{pricing.subtitle}</h4>
+        <h1 className={`${pricing.isPopular ? "text-white" :  "text-black text-2xl"}`}>{pricing.title}</h1>
+        <h4 className={`${pricing.isPopular ? "text-white" : "text-black"}`}>{pricing.subtitle}</h4>
       </div>
 
       <div>
-        <p className=''>{pricing.price} {pricing.duration}</p>
+        <p className={` ${pricing.isPopular ? "text-white" : "text-black text-2xl"}`}> {pricing.price} <span className='text-[16px]'>{pricing.duration}</span></p>
       </div>
 
-      <div>
+      <div  className={` ${pricing.isPopular ? "text-white" : "text-black"}`}>
         {pricing.features.map((feature, index) => (
           <p key={index}>{feature}</p>
         ))}
       </div>
 
-      <div className={`${buttonColor} ${buttonText} btn w-full rounded-full`}>
+      <div className={`${buttonText} btn w-full rounded-full ${pricing.isPopular ? ${buttonColor} : "bg-white" }`}>
         <p>{pricing.button}</p>
       </div>
     </section>

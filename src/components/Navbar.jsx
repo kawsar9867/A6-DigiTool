@@ -88,7 +88,7 @@ function Navbar({ cart }) {
              rounded-full px-3 py-2 text-white font-semibold cursor-pointer
              transition-all duration-300
              hover:from-[#3b2dd4] hover:to-[#7e12d8]
-             text-lg sm:text-sm"
+             text-lg sm:text-sm hidden md:block lg:block"
           >
             Get Started
           </a>

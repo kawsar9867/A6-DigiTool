@@ -7,7 +7,7 @@ import png3 from "../assets/products/Twitter.png";
 function Footer() {
   return (
     <section className="bg-black  ">
-      <div className="p-20 flex gap-30 flex justify-center">
+      <div className="p-20 flex gap-25 flex justify-center">
         <div className="">
           <img src={logo} alt="DigiTools Logo" className="mb-4" />
           <p className="text-gray-400">
@@ -25,7 +25,7 @@ function Footer() {
             <li>Integrations</li>
           </ul>
         </div>
-        <div className="text-gray-400">
+        <div className="text-gray-400 hidden md:block lg:block">
           <ul className="space-y-4">
             <li className="text-2xl text-white">Company</li>
             <li>About</li>
@@ -34,7 +34,7 @@ function Footer() {
             <li>Press</li>
           </ul>
         </div>
-        <div className="text-gray-400">
+        <div className="text-gray-400 hidden md:block lg:block">
           <ul className="space-y-4">
             <li className="text-2xl text-white">Resources</li>
             <li>Documentation</li>
@@ -60,7 +60,7 @@ function Footer() {
           <p className="text-gray-400">© 2026 Digitools. All rights reserved.</p>
         </div>
 
-        <ul className="flex gap-4 text-gray-400">
+        <ul className="flex gap-4 text-gray-400 ">
           <li>Privacy Policy</li>
           <li>Terms of Service</li>
           <li>Cookies</li>
