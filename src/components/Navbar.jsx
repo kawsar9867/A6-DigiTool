@@ -79,7 +79,7 @@ function Navbar({ cart }) {
             </button>
           </div>
           <div className="m-5">
-            <p className="hover:text-purple-500 cursor-pointer   hover:font-semiboldn font-semibold text-gray-400">
+            <p className="text-purple-500 cursor-pointer font-semibold ">
               Login
             </p>
           </div>

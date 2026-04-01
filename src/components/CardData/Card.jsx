@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { toast } from "react-toastify";
 
+
 function Card({ card, cart, setCart }) {
   const addToCart = (item) => {
     setCart([...cart, item]);
@@ -22,6 +23,9 @@ function Card({ card, cart, setCart }) {
     <section className="">
     <div className="bg-white border-3 border-gray-100 rounded-xl p-5 transform transition duration-300 hover:-translate-y-2 hover:shadow-lg h-[370px]">
       <div className="space-y-3">
+        
+          
+          
         <div className="flex items-center justify-between bg-white ">
           <img className="w-10 h-10 border-1 border-gray-300 rounded-full" src={card.icon} alt="" />
           <p className={`${addTagBg(card.tagType)} rounded-full px-3 py-1 text-[17px] shadow-sm`}>
@@ -53,9 +57,10 @@ function Card({ card, cart, setCart }) {
             onClick={() => addToCart(card)}
             className="btn rounded-full w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white hover:from-[#3b2dd4] hover:to-[#7e12d8]"
           >
-            Buy Now{" "}
+            Add to cart{" "}
           </button>
         </div>
+        
       </div>
     </div>
     </section>

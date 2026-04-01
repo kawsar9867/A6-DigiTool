@@ -7,6 +7,7 @@ import Cards from "./components/CardData/Cards";
 import Carts from "./components/Cart/Carts";
 import GetStarted from "./components/GetStarted";
 import WorkFlow from "./components/WorkFlow";
+import Footer from "./components/Footer";
 
 const fetchData = fetch("/data.json").then((res) => res.json());
 
@@ -54,6 +55,7 @@ function App() {
       </section>
       <GetStarted></GetStarted>
       <WorkFlow></WorkFlow>
+      <Footer></Footer>
     </>
   );
 }

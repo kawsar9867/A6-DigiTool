@@ -6,13 +6,25 @@ function Carts({ cart, setCart }) {
 
   const deleteAll = () => {
     setCart([]);
-    toast.success("Payment Done");
+toast.success("Payment Done", {
+  style: {
+    background: "#15803D", // green
+    color: "#fff",
+  },
+});
   };
   const removeItem = (itm) => {
     const newArray = cart.filter((c) => c.id !== itm.id);
     setCart(newArray);
-    toast.success("Item Removed");
+    toast.error("Item Removed", {
+      style: {
+        background: "#FECACA",
+        color: "red"
+      }
+    });
   };
+
+
   return (
     <div className="px-5">
       <div className=" border-2 border-gray-200 rounded-lg space-y-3 p-5 mb-10 mt-5 ">
@@ -35,7 +47,7 @@ function Carts({ cart, setCart }) {
               </div>
             </div>
             <div>
-              <button onClick={() => removeItem(item)} className="btn text-red-500">
+              <button onClick={() => removeItem(item)} className="btn rounded-full border border-red-400 text-red-500 hover:bg-red-100">
                 {" "}
                 Remove{" "}
               </button>
@@ -44,8 +56,8 @@ function Carts({ cart, setCart }) {
         ))}
        
         <div className="flex justify-between">
-          <p className="text-[17px] font-semibold text-[#62738299]">Total</p>
-          <p className="text-[17px] font-semibold "> ${total} </p>
+          <p className="text-[18px] font-semibold text-gray-500">Total:</p>
+          <p className="text-[19px] font-semibold   text-green-500"> ${total} </p>
         </div>
         <button onClick={deleteAll} className="btn rounded-full w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white hover:from-[#3b2dd4] hover:to-[#7e12d8]">
           {" "}
