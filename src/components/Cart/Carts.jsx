@@ -35,8 +35,8 @@ toast.success("Payment Done", {
   <EmptyCart></EmptyCart>
 ) : (
             <>
-        {cart.map((item) => (
-          <div className="bg-[#F9FAFC] p-5 flex justify-between rounded-xl">
+        {cart.map((item, index) => (
+          <div key={index} className="bg-[#F9FAFC] p-5 flex justify-between rounded-xl">
             <div className="flex gap-3">
               <div>
                 <img className="w-10 h-10 border-1 border-gray-300 rounded-full" src={item.icon} alt="" />

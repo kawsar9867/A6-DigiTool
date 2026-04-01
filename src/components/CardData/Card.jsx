@@ -4,6 +4,11 @@ import { toast } from "react-toastify";
 
 function Card({ card, cart, setCart }) {
   const addToCart = (item) => {
+    const duplicate = cart.find(ite=> ite.id === item.id)
+    if(duplicate){
+      toast.error("Item alreday in cart")
+      return
+    }
     setCart([...cart, item]);
     toast.success("Item added")
   };
@@ -44,8 +49,8 @@ function Card({ card, cart, setCart }) {
         </div>
         <div>
           <ul className="text-[#627382] text-[17px]">
-            {card.features.map((f) => (
-              <p className="flex gap-2">
+            {card.features.map((f, i) => (
+              <p key={i} className="flex gap-2">
                 <Check color="green" size="20"> </Check>
                 <li> {f} </li>
               </p>

@@ -8,10 +8,10 @@ const PriceingData = ({ pricing }) => {
 
 
   return (
-    <section className={`${bgColorClass} t-5 mb-10 rounded-lg p-5 space-y-5 transition duration-100 hover:scale-101 relative`}>
-      <div className=' absolute -top-4 left-30 flex '>
+    <section className={`${bgColorClass} t-5 mb-10 rounded-lg p-5 space-y-5 transition duration-100 hover:scale-101 relative shadow-md`}>
+      <div className=' flex justify-center '>
         {
-          pricing.isPopular && <span className='bg-amber-200 rounded-full px-2 py-1 text-amber-500 text-[17px] '>Most Popular</span>
+          pricing.isPopular && <span className='bg-amber-200 absolute -top-4 rounded-full px-2 py-1 text-amber-500 text-[17px] '>Most Popular</span>
         }
       </div>
       <div className=''>
@@ -20,7 +20,7 @@ const PriceingData = ({ pricing }) => {
       </div>
 
       <div>
-        <p className={` ${pricing.isPopular ? "text-white" : "text-black text-2xl"}`}> {pricing.price} <span className='text-[16px]'>{pricing.duration}</span></p>
+        <p className={` ${pricing.isPopular ? "text-white" : "text-black "} text-2xl`}> {pricing.price} <span className='text-[16px]'>{pricing.duration}</span></p>
       </div>
 
       <div  className={` ${pricing.isPopular ? "text-white" : "text-black"}`}>
