@@ -8,6 +8,11 @@ import Carts from "./components/Cart/Carts";
 import GetStarted from "./components/GetStarted";
 import WorkFlow from "./components/WorkFlow";
 import Footer from "./components/Footer";
+import PriceingCard from "./components/Priceing Option/PriceingCard";
+
+
+
+const priceingPromise = fetch("/card.json").then(res=> res.json());
 
 const fetchData = fetch("/data.json").then((res) => res.json());
 
@@ -54,6 +59,11 @@ function App() {
       : <Carts cart={cart} setCart={setCart}></Carts>}
       </section>
       <GetStarted></GetStarted>
+      <main>
+        <Suspense >
+          <PriceingCard priceingPromise={priceingPromise}></PriceingCard>
+        </Suspense>
+      </main>
       <WorkFlow></WorkFlow>
       <Footer></Footer>
     </>

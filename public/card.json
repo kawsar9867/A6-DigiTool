@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Starter",
+    "subtitle": "Perfect for getting started",
+    "price": "$0",
+    "duration": "/Free",
+    "features": [
+      "Basic features",
+      "Limited access",
+      "Community support"
+    ],
+    "button":"Get Started Free",
+    "isPopular": false
+  },
+  {
+    "id": 2,
+    "title": "Pro",
+    "subtitle": "Best for professionals",
+    "price": "$29",
+    "duration": "/Month",
+    "features": [
+      "All Starter features",
+      "Advanced tools",
+      "Priority support"
+    ],
+    "button":"Start Pro Trial",
+    "isPopular": true
+  },
+  {
+    "id": 3,
+    "title": "Enterprise",
+    "subtitle": "For large teams",
+    "price": "$99",
+    "duration": "/Month",
+    "features": [
+      "All Pro features",
+      "Custom solutions",
+      "Dedicated support"
+    ],
+    "button":"Contact Sales",
+    "isPopular": false
+  }
+]
